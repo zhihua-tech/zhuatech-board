@@ -1,5 +1,7 @@
 # ZhuaTech Board｜知华科技董事会与公司治理系统
 
+[简体中文](README.md) | [English](README.en.md)
+
 ## 企业级董事会决议治理
 
 新增会议通知、利益冲突、法定人数、表决门槛和会议记录证据控制，详见 [董事会决议治理](docs/ENTERPRISE_RESOLUTION_GOVERNANCE.md)。
