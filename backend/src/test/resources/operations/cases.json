@@ -1,0 +1,60 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "eligibleVoters": "#6",
+      "uncastVotes": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "yesVotes": "3",
+      "abstainVotes": "2"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "yesPct": "#50"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "yesVotes": "3"
+    },
+    "expected": {
+      "decision": "REVIEW",
+      "uncastVotes": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "quorumPct": "90"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "yesVotes": "5"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "recused": "8",
+      "yesVotes": "0",
+      "noVotes": "0",
+      "abstainVotes": "0"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  }
+]

@@ -1,0 +1,115 @@
+{
+  "slug": "board",
+  "title": "会议法定人数与回避表决分母核对",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "members",
+      "label": "委员总数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "1",
+      "max": "1000000"
+    },
+    {
+      "key": "attending",
+      "label": "出席人数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "recused",
+      "label": "出席回避人数",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "yesVotes",
+      "label": "赞成票",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "noVotes",
+      "label": "反对票",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "abstainVotes",
+      "label": "弃权票",
+      "type": "NUMBER",
+      "scale": 0,
+      "min": "0",
+      "max": "1000000"
+    },
+    {
+      "key": "quorumPct",
+      "label": "输入出席门槛%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    },
+    {
+      "key": "approvalPct",
+      "label": "输入赞成门槛%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "eligibleVoters",
+      "label": "出席非回避人数"
+    },
+    {
+      "key": "uncastVotes",
+      "label": "未投票人数"
+    },
+    {
+      "key": "yesPct",
+      "label": "赞成占表决分母%"
+    },
+    {
+      "key": "quorumMet",
+      "label": "输入出席门槛满足"
+    }
+  ],
+  "description": "按输入章程门槛、回避人数和有效票核对出席及赞成比例，分开表决未完成、未达门槛和条件满足。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "members": "10",
+        "attending": "8",
+        "recused": "2",
+        "yesVotes": "4",
+        "noVotes": "1",
+        "abstainVotes": "1",
+        "quorumPct": "60",
+        "approvalPct": "60"
+      }
+    ]
+  }
+}
